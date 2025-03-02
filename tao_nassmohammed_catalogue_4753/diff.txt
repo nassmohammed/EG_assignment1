@@ -1,0 +1,83 @@
+(base) nasserm@Nassers-MacBook-Pro extragalactic % diff EG_assignment1/tao_nassmohammed_catalogue_4753/summary.4753.txt EG_assignment1/tao_nassmohammed_catalogue_4716/summary.4716.txt
+45c45
+< Output Properties: 17 properties selected
+---
+> Output Properties: 47 properties selected
+49a50,59
+> * Cold Gas Mass in millennium_20160726 (10^10 Msun/h)
+> * Hot Gas Mass in millennium_20160726 (10^10 Msun/h)
+> * Ejected Gas Mass in millennium_20160726 (10^10 Msun/h)
+> * Intracluster Stars Mass in millennium_20160726 (10^10 Msun/h)
+> * Metals Total Stellar Mass in millennium_20160726 (10^10 Msun/h)
+> * Metals Bulge Mass in millennium_20160726 (10^10 Msun/h)
+> * Metals Cold Gas Mass in millennium_20160726 (10^10 Msun/h)
+> * Metals Hot Gas Mass in millennium_20160726 (10^10 Msun/h)
+> * Metals Ejected Gas Mass in millennium_20160726 (10^10 Msun/h)
+> * Metals IntraCluster Stars Mass in millennium_20160726 (10^10 Msun/h)
+52a63,65
+> * Hot Gas Cooling Rate in millennium_20160726 (erg/s)
+> * AGN Heating Rate in millennium_20160726 (erg/s)
+> * Quasar BH Accretion Mass in millennium_20160726 (10^10 Msun/h)
+53a67,83
+> * Time of Last Minor Merger in millennium_20160726 (Myr/h)
+> * Supernova Cold Gas Outflow Rate in millennium_20160726 (Msun/yr)
+> * Mvir in millennium_20160726 (10^10 Msun/h)
+> * Rvir in millennium_20160726 (Mpc/h)
+> * Vvir in millennium_20160726 (km/s)
+> * Vmax in millennium_20160726 (km/s)
+> * Velocity Dispersion in millennium_20160726 (km/s)
+> * X Spin in millennium_20160726 (Mpc * km/s)
+> * Y Spin in millennium_20160726 (Mpc * km/s)
+> * Z Spin in millennium_20160726 (Mpc * km/s)
+> * Total Particles in millennium_20160726 
+> * Central Galaxy Mvir in millennium_20160726 (10^10 Msun/h)
+> * Subhalo Mvir at Infall in millennium_20160726 (10^10 Msun/h)
+> * Subhalo Vvir at Infall in millennium_20160726 (km/s)
+> * Subhalo Vmax at Infall in millennium_20160726 (km/s)
+> * Maximum circular velocity of the halo in millennium_20160726 (km/s)
+> * Flyby Flag in millennium_20160726 
+68,73c98
+< Model: Conroy et al. (2009), Chabrier IMF
+< External link: [Flexible Stellar Population Synthesis (FSPS)](https://github.com/cconroy20/fsps)
+< * All magnitudes assume the simulation little h value from General Properties
+< * Magnitudes are calculated in the AB system
+< Additional information is available from the SED Module documentation at
+< https://asvo.atlassian.net/wiki/display/TAOC/Spectral+Energy+Distribution+Module.
+---
+> Not selected
+75d99
+< Bandpass Filters: 2 filters selected
+77,101d100
+< * JWST/NIRCAM/F200W (Absolute)
+< * JWST/NIRCAM/F200W (Apparent)
+< 
+< Dust: Calzetti dust model
+< This model uses the relationship between colour excess E(B-V) and instantaneous star formation rate to determine the
+< dust content of a galaxy, which is then applied to the galaxy SED using a Calzetti extinction curve  
+<   
+<   
+< External link: [Tonini et al. 2012](http://arxiv.org/abs/1209.1204)
+< Igm: Fan et al. 2006 model
+< When the emitted light from a high-redshift galaxy encounters any neutral hydrogen, an absorption line is produced
+< corresponding to the Lyman-α transition at 1216 Angstroms in the absorber rest-frame.  
+<   
+< Following Fan (2006), TAO uses the following equation for the effective optical depth due to Ly-α absorption by
+< intervening neutral hydrogen:  
+<   
+<   
+< τeff =  
+< 0.85*( (1+z)/5 )4.3 , z < 5.5  
+< 0.15045*( (1+z)/5 )10.9, z >= 5.5  
+<   
+<   
+< External link: [Fan et al. 2006 model](https://arxiv.org/abs/astro-ph/0512082v2)
+< 
+< 
+104c103
+< 15.0 ≤ JWST/NIRCAM/F200W (Absolute) ≤ 29.0
+---
+> 0.0 ≤ Galaxy ID ≤ 1000000000.0
+109c108
+< CSV
+---
+> FITS
