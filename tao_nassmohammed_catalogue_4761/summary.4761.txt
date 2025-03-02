@@ -1,0 +1,111 @@
+Summary
+=======
+Catalogue Geometry:  Box
+Dataset:             Millennium / SAGE
+
+Millennium
+Cosmology: WMAP-1  
+Cosmological parameters: Ωm = 0.25, ΩΛ = 0.75, Ωb = 0.045, σ8 = 0.9, h = 0.73, n = 1  
+Box size: 500 Mpc/h  
+Mass resolution: 8.6x10^8 Msun/h  
+Force resolution: 5 kpc/h  
+  
+Paper: [Springel et al. 2005](http://arxiv.org/abs/astro-ph/0504097)  
+External link: [The German Astrophysical Virtual Observatory](http://www.mpa-garching.mpg.de/millennium/)
+
+SAGE
+The Semi-Analytic Galaxy Evolution (SAGE) model used in this work is a publicly available codebase that runs on the dark
+matter halo trees of a cosmological N-body simulation.  
+Paper: [Croton et al. 2016](http://arxiv.org/abs/1601.04709)  
+External link: [Semi-Analytic Galaxy Evolution](https://github.com/darrencroton/sage)
+
+
+Acknowledgements
+================
+Theoretical Astrophysical Observatory (TAO):
+Data used in this work was generated using Swinburne University's Theoretical Astrophysical Observatory (TAO). TAO is
+part of the Australian All-Sky Virtual Observatory (ASVO) and is freely accessible at {{ siteurl }}.
+
+Millennium:  
+The Millennium Simulation was carried out by the Virgo Supercomputing Consortium at the Computing Centre of the Max
+Plank Society in Garching. It is publicly available at http://www.mpa-garching.mpg.de/Millennium/.
+
+SAGE:
+The Semi-Analytic Galaxy Evolution (SAGE) model used in this work is a publicly available codebase that runs on the dark
+matter halo trees of a cosmological N-body simulation. It is available for download at
+https://github.com/darrencroton/sage.
+
+
+Details
+========
+Box Size: 500.0
+Redshift: 0.0000
+
+
+Output Properties: 17 properties selected
+
+* Total Stellar Mass in millennium_20160726 (10^10 Msun/h)
+* Bulge Stellar Mass in millennium_20160726 (10^10 Msun/h)
+* Black Hole Mass in millennium_20160726 (10^10 Msun/h)
+* Galaxy Classification in millennium_20160726 
+* Disk Scale Radius in millennium_20160726 (Mpc/h)
+* Total Star Formation Rate in millennium_20160726 (Msun/year)
+* Time of Last Major Merger in millennium_20160726 (Myr/h)
+* X in millennium_20160726 (Mpc/h)
+* Y in millennium_20160726 (Mpc/h)
+* Z in millennium_20160726 (Mpc/h)
+* X Velocity in millennium_20160726 (km/s)
+* Y Velocity in millennium_20160726 (km/s)
+* Z Velocity in millennium_20160726 (km/s)
+* Snapshot Number in millennium_20160726 
+* Galaxy ID in millennium_20160726 
+* Central Galaxy ID in millennium_20160726 
+* Simulation Halo ID in millennium_20160726 
+
+
+Spectral Energy Distribution
+============================
+Model: Conroy et al. (2009), Chabrier IMF
+External link: [Flexible Stellar Population Synthesis (FSPS)](https://github.com/cconroy20/fsps)
+* All magnitudes assume the simulation little h value from General Properties
+* Magnitudes are calculated in the AB system
+Additional information is available from the SED Module documentation at
+https://asvo.atlassian.net/wiki/display/TAOC/Spectral+Energy+Distribution+Module.
+
+Bandpass Filters: 2 filters selected
+
+* JWST/NIRCAM/F200W (Absolute)
+* JWST/NIRCAM/F200W (Apparent)
+
+Dust: Calzetti dust model
+This model uses the relationship between colour excess E(B-V) and instantaneous star formation rate to determine the
+dust content of a galaxy, which is then applied to the galaxy SED using a Calzetti extinction curve  
+  
+  
+External link: [Tonini et al. 2012](http://arxiv.org/abs/1209.1204)
+Igm: Fan et al. 2006 model
+When the emitted light from a high-redshift galaxy encounters any neutral hydrogen, an absorption line is produced
+corresponding to the Lyman-α transition at 1216 Angstroms in the absorber rest-frame.  
+  
+Following Fan (2006), TAO uses the following equation for the effective optical depth due to Ly-α absorption by
+intervening neutral hydrogen:  
+  
+  
+τeff =  
+0.85*( (1+z)/5 )4.3 , z < 5.5  
+0.15045*( (1+z)/5 )10.9, z >= 5.5  
+  
+  
+External link: [Fan et al. 2006 model](https://arxiv.org/abs/astro-ph/0512082v2)
+
+
+Selection
+=========
+15.0 ≤ JWST/NIRCAM/F200W (Absolute) ≤ 29.0
+
+
+Output
+======
+HDF5
+
+

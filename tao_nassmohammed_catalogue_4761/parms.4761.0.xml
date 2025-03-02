@@ -1,0 +1,116 @@
+<?xml version="1.0" ?>
+<tao timestamp="2025-03-02T03:54:26+00:00" xmlns="http://tao.asvo.org.au/schema/module-parameters-v1">
+	<username>nassmohammed</username>
+	<inputfile>/fred/oz114/kdtao/bigdata/millennium-public-sage-ozstar-sed-kdtree.h5</inputfile>
+	<workflow>
+		<light-cone id="box">
+			<module-version>1</module-version>
+			<geometry>box</geometry>
+			<simulation>Millennium</simulation>
+			<simulation-type>Semi-analytic</simulation-type>
+			<galaxy-model>SAGE</galaxy-model>
+			<version>2016</version>
+			<redshift>0.0000</redshift>
+			<query-box-size>500</query-box-size>
+			<rng-seed>44477323</rng-seed>
+			<output-fields>
+				<item description="Total stellar mass of galaxy" label="Total Stellar Mass" units="10^10 Msun/h">StellarMass</item>
+				<item description="Stellar mass in the bulge component of the galaxy" label="Bulge Stellar Mass" units="10^10 Msun/h">BulgeMass</item>
+				<item description="Mass of the black hole" label="Black Hole Mass" units="10^10 Msun/h">BlackHoleMass</item>
+				<item description="Galaxy type: 0-central, 1-satellite" label="Galaxy Classification" units="">objecttype</item>
+				<item description="Scale radius of the stellar disk" label="Disk Scale Radius" units="Mpc/h">diskscaleradius</item>
+				<item description="Total star formation rate, (includes both disk and bulge components)" label="Total Star Formation Rate" units="Msun/year">TotSfr</item>
+				<item description="Time of last major merger" label="Time of Last Major Merger" units="Myr/h">TimeofLastMajorMerger</item>
+				<item description="Co-moving X position of the (sub)halo" label="X" units="Mpc/h">posx</item>
+				<item description="Co-moving Y position of the (sub)halo" label="Y" units="Mpc/h">posy</item>
+				<item description="Co-moving Z position of the (sub)halo" label="Z" units="Mpc/h">posz</item>
+				<item description="X component of the galaxy/halo velocity" label="X Velocity" units="km/s">velx</item>
+				<item description="Y component of the galaxy/halo velocity" label="Y Velocity" units="km/s">vely</item>
+				<item description="Z component of the galaxy/halo velocity" label="Z Velocity" units="km/s">velz</item>
+				<item description="Snapshot number in the simulation" label="Snapshot Number" units="">snapnum</item>
+				<item description="An unique ID that stays with the galaxy/halo for its entire history" label="Galaxy ID" units="">GalaxyIndex</item>
+				<item description="The unique Galaxy ID of the central galaxy this galaxy/halo belongs to" label="Central Galaxy ID" units="">CentralGalaxyIndex</item>
+				<item description="An ID for the (sub)halo passed through from the original simulation" label="Simulation Halo ID" units="">SimulationHaloIndex</item>
+			</output-fields>
+		</light-cone>
+		<sed id="sed">
+			<module-version>1</module-version>
+			<parents>
+				<item>box</item>
+			</parents>
+			<single-stellar-population-model>conroy/ssp_chabrier_no_mass_norm.dat</single-stellar-population-model>
+			<wavelengths-file>conroy/wavelengths.dat</wavelengths-file>
+			<ages-file>conroy/ages.dat</ages-file>
+			<metallicities-file>conroy/metallicities.dat</metallicities-file>
+		</sed>
+		<filter id="filter">
+			<module-version>1</module-version>
+			<parents>
+				<item>igm</item>
+			</parents>
+			<bandpass-filters>
+				<item description="JWST/NIRCAM/F200W" label="JWST/NIRCAM/F200W" selected="absolute,apparent">JWST/NIRCAM/F200W.dati</item>
+			</bandpass-filters>
+		</filter>
+		<dust id="dust">
+			<module-version>1</module-version>
+			<parents>
+				<item>igm</item>
+			</parents>
+			<model>Calzetti</model>
+		</dust>
+		<igm id="igm">
+			<module-version>1</module-version>
+			<parents>
+				<item>sed</item>
+			</parents>
+			<igm-absorb-model>FAN2006</igm-absorb-model>
+		</igm>
+		<record-filter>
+			<module-version>1</module-version>
+			<parents>
+				<item>filter</item>
+			</parents>
+			<filter>
+				<filter-attribute>JWST/NIRCAM/F200W.dati_absolute</filter-attribute>
+				<filter-min>15</filter-min>
+				<filter-max>29</filter-max>
+			</filter>
+		</record-filter>
+		<hdf5 id="hdf5">
+			<module-version>1</module-version>
+			<parents>
+				<item>filter</item>
+			</parents>
+			<fields>
+				<item label="Total Stellar Mass">StellarMass</item>
+				<item label="Bulge Stellar Mass">BulgeMass</item>
+				<item label="Black Hole Mass">BlackHoleMass</item>
+				<item label="Galaxy Classification">objecttype</item>
+				<item label="Disk Scale Radius">diskscaleradius</item>
+				<item label="Total Star Formation Rate">TotSfr</item>
+				<item label="Time of Last Major Merger">TimeofLastMajorMerger</item>
+				<item label="X">posx</item>
+				<item label="Y">posy</item>
+				<item label="Z">posz</item>
+				<item label="X Velocity">velx</item>
+				<item label="Y Velocity">vely</item>
+				<item label="Z Velocity">velz</item>
+				<item label="Snapshot Number">snapnum</item>
+				<item label="Galaxy ID">GalaxyIndex</item>
+				<item label="Central Galaxy ID">CentralGalaxyIndex</item>
+				<item label="Simulation Halo ID">SimulationHaloIndex</item>
+				<item label="JWST/NIRCAM/F200W (Absolute)">JWST/NIRCAM/F200W.dati_absolute</item>
+				<item label="JWST/NIRCAM/F200W (Apparent)">JWST/NIRCAM/F200W.dati_apparent</item>
+			</fields>
+			<filename>tao.4761.0.hdf5</filename>
+		</hdf5>
+	</workflow>
+
+  <aliasX>X</aliasX><aliasY>Y</aliasY><aliasZ>Z</aliasZ><aliasCOLOUR></aliasCOLOUR>
+  <outputdir>output/0</outputdir>
+  <logdir>log</logdir>
+  <bandpassdatapath>/fred/oz114/kdtao/config/bandpass_filters/</bandpassdatapath>
+  <subjobindex>0</subjobindex>
+  <taodir>/fred/oz114/kdtao</taodir>
+</tao>
