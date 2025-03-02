@@ -1,0 +1,141 @@
+<?xml version="1.0" ?>
+<tao timestamp="2025-02-17T00:05:40+00:00" xmlns="http://tao.asvo.org.au/schema/module-parameters-v1">
+	<username>nassmohammed</username>
+	<inputfile>/fred/oz114/kdtao/bigdata/millennium-public-sage-ozstar-sed-kdtree.h5</inputfile>
+	<workflow>
+		<light-cone id="box">
+			<module-version>1</module-version>
+			<geometry>box</geometry>
+			<simulation>Millennium</simulation>
+			<simulation-type>Semi-analytic</simulation-type>
+			<galaxy-model>SAGE</galaxy-model>
+			<version>2016</version>
+			<redshift>0.0000</redshift>
+			<query-box-size>500</query-box-size>
+			<rng-seed>74456725</rng-seed>
+			<output-fields>
+				<item description="Total stellar mass of galaxy" label="Total Stellar Mass" units="10^10 Msun/h">StellarMass</item>
+				<item description="Stellar mass in the bulge component of the galaxy" label="Bulge Stellar Mass" units="10^10 Msun/h">BulgeMass</item>
+				<item description="Mass of the black hole" label="Black Hole Mass" units="10^10 Msun/h">BlackHoleMass</item>
+				<item description="Cold gas mass of the galaxy" label="Cold Gas Mass" units="10^10 Msun/h">coldgas</item>
+				<item description="Hot gas mass of the galaxy" label="Hot Gas Mass" units="10^10 Msun/h">HotGas</item>
+				<item description="Mass of gas ejected from both the galaxy and the halo" label="Ejected Gas Mass" units="10^10 Msun/h">EjectedMass</item>
+				<item description="Stellar mass in the intracluster stars" label="Intracluster Stars Mass" units="10^10 Msun/h">ICS</item>
+				<item description="Mass of metals in the galaxy stars (bulge + disk)" label="Metals Total Stellar Mass" units="10^10 Msun/h">MetalsStellarMass</item>
+				<item description="Mass of metals in the bulge stars" label="Metals Bulge Mass" units="10^10 Msun/h">MetalsBulgeMass</item>
+				<item description="Mass of metals in the cold gas phase" label="Metals Cold Gas Mass" units="10^10 Msun/h">metalscoldgas</item>
+				<item description="Mass of metals in the hot gas phase" label="Metals Hot Gas Mass" units="10^10 Msun/h">MetalsHotGas</item>
+				<item description="Mass of metals in the gas ejected from the galaxy" label="Metals Ejected Gas Mass" units="10^10 Msun/h">MetalsEjectedMass</item>
+				<item description="Mass of metals in the intracluster stars" label="Metals IntraCluster Stars Mass" units="10^10 Msun/h">MetalsICS</item>
+				<item description="Galaxy type: 0-central, 1-satellite" label="Galaxy Classification" units="">objecttype</item>
+				<item description="Scale radius of the stellar disk" label="Disk Scale Radius" units="Mpc/h">diskscaleradius</item>
+				<item description="Total star formation rate, (includes both disk and bulge components)" label="Total Star Formation Rate" units="Msun/year">TotSfr</item>
+				<item description="Hot halo gas cooling rate" label="Hot Gas Cooling Rate" units="erg/s">Cooling</item>
+				<item description="AGN Heating Rate" label="AGN Heating Rate" units="erg/s">Heating</item>
+				<item description="The mass accreted onto the black hole in the quasar mode across the current simulation time step." label="Quasar BH Accretion Mass" units="10^10 Msun/h">QuasarModeBHaccretionMass</item>
+				<item description="Time of last major merger" label="Time of Last Major Merger" units="Myr/h">TimeofLastMajorMerger</item>
+				<item description="Time of last minor merger" label="Time of Last Minor Merger" units="Myr/h">TimeofLastMinorMerger</item>
+				<item description="Cold gas outflow rate from supernovae" label="Supernova Cold Gas Outflow Rate" units="Msun/yr">OutflowRate</item>
+				<item description="Virial mass of the (sub)halo" label="Mvir" units="10^10 Msun/h">Mvir</item>
+				<item description="Physical virial radius of the (sub)halo" label="Rvir" units="Mpc/h">Rvir</item>
+				<item description="Virial velocity of the (sub)halo" label="Vvir" units="km/s">Vvir</item>
+				<item description="Maximum circular velocity of the (sub)halo" label="Vmax" units="km/s">Vmax</item>
+				<item description="Velocity dispersion of the (sub)halo" label="Velocity Dispersion" units="km/s">VelDisp</item>
+				<item description="X-component of specific angular momentum. Defined as Spin[3] :=  1/N \sum_{i=1}^{N} (r_i - rcen) \cross  (v_i - vcen), where r_i is the physical position of the i'th particle, rcen is the position of the center of mass, v_i is the peculiar velocity of the particle and vcen is the bulk velocity of the halo" label="X Spin" units="Mpc * km/s">Spin_x</item>
+				<item description="Y-component of specific angular momentum. Defined as Spin[3] :=  1/N \sum_{i=1}^{N} (r_i - rcen) \cross  (v_i - vcen), where r_i is the physical position of the i'th particle, rcen is the position of the center of mass, v_i is the peculiar velocity of the particle and vcen is the bulk velocity of the halo" label="Y Spin" units="Mpc * km/s">Spin_y</item>
+				<item description="Z-component of specific angular momentum. Defined as Spin[3] :=  1/N \sum_{i=1}^{N} (r_i - rcen) \cross  (v_i - vcen), where r_i is the physical position of the i'th particle, rcen is the position of the center of mass, v_i is the peculiar velocity of the particle and vcen is the bulk velocity of the halo" label="Z Spin" units="Mpc * km/s">Spin_z</item>
+				<item description="Total number of simulation particles in the dark matter halo" label="Total Particles" units="">Len</item>
+				<item description="Virial mass of the central galaxy halo" label="Central Galaxy Mvir" units="10^10 Msun/h">CentralMvir</item>
+				<item description="Subhalo Mvir at infall" label="Subhalo Mvir at Infall" units="10^10 Msun/h">infallMvir</item>
+				<item description="Virial velocity of the (sub)halo at infall" label="Subhalo Vvir at Infall" units="km/s">infallVvir</item>
+				<item description="Maximum circular velocity of the (sub)halo at infall" label="Subhalo Vmax at Infall" units="km/s">infallVmax</item>
+				<item description="Maximum circular velocity attained in the assembly history (susceptible to spikes during mergers, see Vrelax for a better property)" label="Maximum circular velocity of the halo" units="km/s">Vpeak</item>
+				<item description="1-is a flyby halo, 0-normal halo" label="Flyby Flag" units="">isFlyby</item>
+				<item description="Co-moving X position of the (sub)halo" label="X" units="Mpc/h">posx</item>
+				<item description="Co-moving Y position of the (sub)halo" label="Y" units="Mpc/h">posy</item>
+				<item description="Co-moving Z position of the (sub)halo" label="Z" units="Mpc/h">posz</item>
+				<item description="X component of the galaxy/halo velocity" label="X Velocity" units="km/s">velx</item>
+				<item description="Y component of the galaxy/halo velocity" label="Y Velocity" units="km/s">vely</item>
+				<item description="Z component of the galaxy/halo velocity" label="Z Velocity" units="km/s">velz</item>
+				<item description="Snapshot number in the simulation" label="Snapshot Number" units="">snapnum</item>
+				<item description="An unique ID that stays with the galaxy/halo for its entire history" label="Galaxy ID" units="">GalaxyIndex</item>
+				<item description="The unique Galaxy ID of the central galaxy this galaxy/halo belongs to" label="Central Galaxy ID" units="">CentralGalaxyIndex</item>
+				<item description="An ID for the (sub)halo passed through from the original simulation" label="Simulation Halo ID" units="">SimulationHaloIndex</item>
+			</output-fields>
+		</light-cone>
+		<record-filter>
+			<module-version>1</module-version>
+			<parents>
+				<item>box</item>
+			</parents>
+			<filter>
+				<filter-attribute>GalaxyIndex</filter-attribute>
+				<filter-min>0</filter-min>
+				<filter-max>1000000000</filter-max>
+			</filter>
+		</record-filter>
+		<hdf5 id="hdf5">
+			<module-version>1</module-version>
+			<parents>
+				<item>box</item>
+			</parents>
+			<fields>
+				<item label="Total Stellar Mass">StellarMass</item>
+				<item label="Bulge Stellar Mass">BulgeMass</item>
+				<item label="Black Hole Mass">BlackHoleMass</item>
+				<item label="Cold Gas Mass">coldgas</item>
+				<item label="Hot Gas Mass">HotGas</item>
+				<item label="Ejected Gas Mass">EjectedMass</item>
+				<item label="Intracluster Stars Mass">ICS</item>
+				<item label="Metals Total Stellar Mass">MetalsStellarMass</item>
+				<item label="Metals Bulge Mass">MetalsBulgeMass</item>
+				<item label="Metals Cold Gas Mass">metalscoldgas</item>
+				<item label="Metals Hot Gas Mass">MetalsHotGas</item>
+				<item label="Metals Ejected Gas Mass">MetalsEjectedMass</item>
+				<item label="Metals IntraCluster Stars Mass">MetalsICS</item>
+				<item label="Galaxy Classification">objecttype</item>
+				<item label="Disk Scale Radius">diskscaleradius</item>
+				<item label="Total Star Formation Rate">TotSfr</item>
+				<item label="Hot Gas Cooling Rate">Cooling</item>
+				<item label="AGN Heating Rate">Heating</item>
+				<item label="Quasar BH Accretion Mass">QuasarModeBHaccretionMass</item>
+				<item label="Time of Last Major Merger">TimeofLastMajorMerger</item>
+				<item label="Time of Last Minor Merger">TimeofLastMinorMerger</item>
+				<item label="Supernova Cold Gas Outflow Rate">OutflowRate</item>
+				<item label="Mvir">Mvir</item>
+				<item label="Rvir">Rvir</item>
+				<item label="Vvir">Vvir</item>
+				<item label="Vmax">Vmax</item>
+				<item label="Velocity Dispersion">VelDisp</item>
+				<item label="X Spin">Spin_x</item>
+				<item label="Y Spin">Spin_y</item>
+				<item label="Z Spin">Spin_z</item>
+				<item label="Total Particles">Len</item>
+				<item label="Central Galaxy Mvir">CentralMvir</item>
+				<item label="Subhalo Mvir at Infall">infallMvir</item>
+				<item label="Subhalo Vvir at Infall">infallVvir</item>
+				<item label="Subhalo Vmax at Infall">infallVmax</item>
+				<item label="Maximum circular velocity of the halo">Vpeak</item>
+				<item label="Flyby Flag">isFlyby</item>
+				<item label="X">posx</item>
+				<item label="Y">posy</item>
+				<item label="Z">posz</item>
+				<item label="X Velocity">velx</item>
+				<item label="Y Velocity">vely</item>
+				<item label="Z Velocity">velz</item>
+				<item label="Snapshot Number">snapnum</item>
+				<item label="Galaxy ID">GalaxyIndex</item>
+				<item label="Central Galaxy ID">CentralGalaxyIndex</item>
+				<item label="Simulation Halo ID">SimulationHaloIndex</item>
+			</fields>
+			<filename>tao.4716.0.hdf5</filename>
+		</hdf5>
+	</workflow>
+
+  <aliasX>X</aliasX><aliasY>Y</aliasY><aliasZ>Z</aliasZ><aliasCOLOUR></aliasCOLOUR>
+  <outputdir>output/0</outputdir>
+  <logdir>log</logdir>
+  <bandpassdatapath>/fred/oz114/kdtao/config/bandpass_filters/</bandpassdatapath>
+  <subjobindex>0</subjobindex>
+  <taodir>/fred/oz114/kdtao</taodir>
+</tao>

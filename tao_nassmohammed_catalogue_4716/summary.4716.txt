@@ -1,0 +1,110 @@
+Summary
+=======
+Catalogue Geometry:  Box
+Dataset:             Millennium / SAGE
+
+Millennium
+Cosmology: WMAP-1  
+Cosmological parameters: Ωm = 0.25, ΩΛ = 0.75, Ωb = 0.045, σ8 = 0.9, h = 0.73, n = 1  
+Box size: 500 Mpc/h  
+Mass resolution: 8.6x10^8 Msun/h  
+Force resolution: 5 kpc/h  
+  
+Paper: [Springel et al. 2005](http://arxiv.org/abs/astro-ph/0504097)  
+External link: [The German Astrophysical Virtual Observatory](http://www.mpa-garching.mpg.de/millennium/)
+
+SAGE
+The Semi-Analytic Galaxy Evolution (SAGE) model used in this work is a publicly available codebase that runs on the dark
+matter halo trees of a cosmological N-body simulation.  
+Paper: [Croton et al. 2016](http://arxiv.org/abs/1601.04709)  
+External link: [Semi-Analytic Galaxy Evolution](https://github.com/darrencroton/sage)
+
+
+Acknowledgements
+================
+Theoretical Astrophysical Observatory (TAO):
+Data used in this work was generated using Swinburne University's Theoretical Astrophysical Observatory (TAO). TAO is
+part of the Australian All-Sky Virtual Observatory (ASVO) and is freely accessible at {{ siteurl }}.
+
+Millennium:  
+The Millennium Simulation was carried out by the Virgo Supercomputing Consortium at the Computing Centre of the Max
+Plank Society in Garching. It is publicly available at http://www.mpa-garching.mpg.de/Millennium/.
+
+SAGE:
+The Semi-Analytic Galaxy Evolution (SAGE) model used in this work is a publicly available codebase that runs on the dark
+matter halo trees of a cosmological N-body simulation. It is available for download at
+https://github.com/darrencroton/sage.
+
+
+Details
+========
+Box Size: 500.0
+Redshift: 0.0000
+
+
+Output Properties: 47 properties selected
+
+* Total Stellar Mass in millennium_20160726 (10^10 Msun/h)
+* Bulge Stellar Mass in millennium_20160726 (10^10 Msun/h)
+* Black Hole Mass in millennium_20160726 (10^10 Msun/h)
+* Cold Gas Mass in millennium_20160726 (10^10 Msun/h)
+* Hot Gas Mass in millennium_20160726 (10^10 Msun/h)
+* Ejected Gas Mass in millennium_20160726 (10^10 Msun/h)
+* Intracluster Stars Mass in millennium_20160726 (10^10 Msun/h)
+* Metals Total Stellar Mass in millennium_20160726 (10^10 Msun/h)
+* Metals Bulge Mass in millennium_20160726 (10^10 Msun/h)
+* Metals Cold Gas Mass in millennium_20160726 (10^10 Msun/h)
+* Metals Hot Gas Mass in millennium_20160726 (10^10 Msun/h)
+* Metals Ejected Gas Mass in millennium_20160726 (10^10 Msun/h)
+* Metals IntraCluster Stars Mass in millennium_20160726 (10^10 Msun/h)
+* Galaxy Classification in millennium_20160726 
+* Disk Scale Radius in millennium_20160726 (Mpc/h)
+* Total Star Formation Rate in millennium_20160726 (Msun/year)
+* Hot Gas Cooling Rate in millennium_20160726 (erg/s)
+* AGN Heating Rate in millennium_20160726 (erg/s)
+* Quasar BH Accretion Mass in millennium_20160726 (10^10 Msun/h)
+* Time of Last Major Merger in millennium_20160726 (Myr/h)
+* Time of Last Minor Merger in millennium_20160726 (Myr/h)
+* Supernova Cold Gas Outflow Rate in millennium_20160726 (Msun/yr)
+* Mvir in millennium_20160726 (10^10 Msun/h)
+* Rvir in millennium_20160726 (Mpc/h)
+* Vvir in millennium_20160726 (km/s)
+* Vmax in millennium_20160726 (km/s)
+* Velocity Dispersion in millennium_20160726 (km/s)
+* X Spin in millennium_20160726 (Mpc * km/s)
+* Y Spin in millennium_20160726 (Mpc * km/s)
+* Z Spin in millennium_20160726 (Mpc * km/s)
+* Total Particles in millennium_20160726 
+* Central Galaxy Mvir in millennium_20160726 (10^10 Msun/h)
+* Subhalo Mvir at Infall in millennium_20160726 (10^10 Msun/h)
+* Subhalo Vvir at Infall in millennium_20160726 (km/s)
+* Subhalo Vmax at Infall in millennium_20160726 (km/s)
+* Maximum circular velocity of the halo in millennium_20160726 (km/s)
+* Flyby Flag in millennium_20160726 
+* X in millennium_20160726 (Mpc/h)
+* Y in millennium_20160726 (Mpc/h)
+* Z in millennium_20160726 (Mpc/h)
+* X Velocity in millennium_20160726 (km/s)
+* Y Velocity in millennium_20160726 (km/s)
+* Z Velocity in millennium_20160726 (km/s)
+* Snapshot Number in millennium_20160726 
+* Galaxy ID in millennium_20160726 
+* Central Galaxy ID in millennium_20160726 
+* Simulation Halo ID in millennium_20160726 
+
+
+Spectral Energy Distribution
+============================
+Not selected
+
+
+Selection
+=========
+0.0 ≤ Galaxy ID ≤ 1000000000.0
+
+
+Output
+======
+FITS
+
+
